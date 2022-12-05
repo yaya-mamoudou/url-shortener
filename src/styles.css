@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --primary-1:hsl(180, 66%, 49%);
+
+    --voilet: hsl(257, 27%, 26%);
+    --dark-voilet: hsl(260, 8%, 14%);
+    --grayish-voilet:  hsl(257, 7%, 63%);
+
+    --red:hsl(0, 87%, 67%);
+
+    --gray:hsl(0, 0%, 75%);
+    --dark-blue:hsl(255, 11%, 22%);
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+}
