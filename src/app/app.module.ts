@@ -10,6 +10,7 @@ import { StatsComponent } from './stats/stats.component';
 import { StatCardComponent } from './stat-card/stat-card.component';
 import { ShortenFormComponent } from './shorten-form/shorten-form.component';
 import { PreFooterComponent } from './pre-footer/pre-footer.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PreFooterComponent } from './pre-footer/pre-footer.component';
     StatsComponent,
     StatCardComponent,
     ShortenFormComponent,
-    PreFooterComponent
+    PreFooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
