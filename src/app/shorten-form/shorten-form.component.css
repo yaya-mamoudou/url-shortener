@@ -1,0 +1,53 @@
+.form_box{
+    border-radius: 8px;
+    background-color: var(--voilet);
+    display: flex;
+    height: 140px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    overflow: hidden;
+}
+
+.form_box > div{
+    z-index: 2;
+    display: flex;
+    width: 90%;
+}
+
+input{
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 0 1.5rem;
+    font-size: 16px;
+}
+input::placeholder{
+    color: #ccc;
+}
+
+input:focus{
+    outline: solid #ccc 2px;
+}
+
+img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .form_box > div{
+        flex-direction: column;
+    }
+
+    input{
+        padding: 0.6rem;
+    }
+    .button{
+        margin-top: 12px;
+    }
+}

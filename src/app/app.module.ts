@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
 import { StatsComponent } from './stats/stats.component';
 import { StatCardComponent } from './stat-card/stat-card.component';
+import { ShortenFormComponent } from './shorten-form/shorten-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StatCardComponent } from './stat-card/stat-card.component';
     NavbarComponent,
     HeroComponent,
     StatsComponent,
-    StatCardComponent
+    StatCardComponent,
+    ShortenFormComponent
   ],
   imports: [
     BrowserModule,
