@@ -9,6 +9,7 @@ import { HeroComponent } from './hero/hero.component';
 import { StatsComponent } from './stats/stats.component';
 import { StatCardComponent } from './stat-card/stat-card.component';
 import { ShortenFormComponent } from './shorten-form/shorten-form.component';
+import { PreFooterComponent } from './pre-footer/pre-footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ShortenFormComponent } from './shorten-form/shorten-form.component';
     HeroComponent,
     StatsComponent,
     StatCardComponent,
-    ShortenFormComponent
+    ShortenFormComponent,
+    PreFooterComponent
   ],
   imports: [
     BrowserModule,
