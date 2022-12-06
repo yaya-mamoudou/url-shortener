@@ -1,0 +1,24 @@
+<div class="container">
+    <nav class="position-relative">
+        <img src="assets/favicon-32x32.png" alt="Logo">
+        <div class="d-none d-md-flex w-100 align-items-center ">
+            <span>Features</span>
+            <span>Pricing</span>
+            <span>Resources</span>
+            <span>Login</span>
+            <app-button label="Sign Up"></app-button>
+        </div>
+
+        <i (click)="toggleNavbar()" role="button" class="fa-solid fa-bars d-md-none ms-auto"></i>
+
+        <!-- Mobile nav menu -->
+        <div [class.d-none]="navbarState" class="mobile-nav">
+            <span>Features</span>
+            <span>Pricing</span>
+            <span>Resources</span>
+            <hr class="line">
+            <span class="mx-auto">Login</span>
+            <app-button label="Sign Up"></app-button>
+        </div>
+    </nav>
+</div>
