@@ -43,6 +43,7 @@ span:hover{
         border-radius: 15px;
         padding: 2.5rem 1.5rem;
         top: 50px;
+        /* font-size: 16px; */
     }
 
     .mobile-nav span {
