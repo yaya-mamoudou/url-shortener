@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="container text-center">
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing accross the we with our advanced statistics dashboard</p>
+        <div class="cards_container">
+            <div class="bar"></div>
+            <div *ngFor="let item of statistics">
+                <app-stat-card title="{{item.title}}" description="{{item.description}}" img="{{item.img}}"></app-stat-card>
+            </div>
+        </div>
+    </div>
+</div>

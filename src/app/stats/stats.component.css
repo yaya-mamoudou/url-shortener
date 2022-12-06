@@ -1,0 +1,52 @@
+.container-fluid{
+    min-height: 80vh;
+    margin-top: 200px;
+    background-color: var(--light-gray);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.cards_container{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+.cards_container > div{
+    z-index: 2;
+}
+
+.cards_container > div:nth-child(3){
+      margin-top:3.2rem;
+}
+
+.cards_container > div:nth-child(4){
+     margin-top:6.2rem;
+}
+
+.bar{
+    height: 10px;
+    background-color: var(--cyan);
+    width: 60%;
+    position: absolute;
+    align-self: center;
+    z-index: 1;
+}
+
+p{
+    width: 50%;
+    align-self: center;
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .cards_container{
+        flex-direction: column;
+        height: fit-content !important;
+    }
+}
