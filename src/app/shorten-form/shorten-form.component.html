@@ -1,7 +1,19 @@
 <div class="form_box position-relative">
     <img src="assets/bg-shorten-desktop.svg"/>
-    <div>
-        <input type="text" placeholder="Shorten a link here...">
-        <app-button myClass="full" [ngClass]="'button'" type="secondary" label="Shorten It!"></app-button>
-    </div>
+    <form (submit)="submit()">
+        <div>
+            <input (input)="validate()" [class.input-error]="validation.error" name="url" [(ngModel)]="url" type="text" placeholder="Shorten a link here..."><br>
+            <span [class.error-message]="validation.error">{{validation.message}}</span>
+        </div>
+        <app-button  myClass="full" [ngClass]="'button'" type="secondary" label="Shorten It!"></app-button>
+    </form>
 </div>
+
+<ng-container *ngFor="let link of links">
+    <div>
+        <h5>{{link.original_link}}</h5>
+        <hr>
+        <h5>{{link.short_link}}</h5>
+        <app-button [ngClass]="['button-copy']" type="secondary" label="Copy" myClass="full" ></app-button>
+    </div>
+</ng-container>

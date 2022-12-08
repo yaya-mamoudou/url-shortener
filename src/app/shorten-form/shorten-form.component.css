@@ -1,18 +1,48 @@
+:host > div:not(.form_box){
+    background-color: white;
+    display: flex;
+    margin-top: 15px;
+    padding: 1rem;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+:host > div:not(.form_box) h5:first-child{
+    margin-right: auto;
+}
+
+:host > div:not(.form_box) h5:nth-child(3){
+    margin-right: 15px;
+    color: var(--cyan);
+}
+
+h5{
+    font-weight: 500 !important;
+    font-size: 16px;
+}
+
 .form_box{
     border-radius: 8px;
     background-color: var(--voilet);
     display: flex;
-    height: 140px;
+    min-height: 140px;
     justify-content: center;
     align-items: center;
     margin-top: -70px;
     overflow: hidden;
 }
 
-.form_box > div{
+.form_box > form{
     z-index: 2;
     display: flex;
     width: 90%;
+}
+
+.form_box > form > div{
+    display: flex;
+    width: 100%;
+    position: relative;
 }
 
 input{
@@ -24,6 +54,7 @@ input{
     padding: 0 1.5rem;
     font-size: 16px;
 }
+
 input::placeholder{
     color: #ccc;
 }
@@ -39,15 +70,70 @@ img{
     z-index: 1;
 }
 
+hr{
+    display: none;
+}
+
+.input-error,.input-error:focus{
+    outline: var(--red) solid 2px;
+}
+
+.input-error::placeholder{
+    color: var(--red);
+    opacity: 0.8;
+}
+
+.error-message{
+    color: var(--red);
+    position: absolute;
+    bottom: -25px;
+    font-size: 13px;
+}
+
 @media only screen and (max-width: 768px) {
-    .form_box > div{
+    .form_box > form{
         flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    hr{
+        display: block;
+        border: solid 1px #ccc;
+        width: 100%;
     }
 
     input{
         padding: 0.6rem;
+        margin-right: 0;
     }
+
     .button{
-        margin-top: 12px;
+        margin-top: 30px;
+    }
+
+    :host > div:not(.form_box){
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+    :host > div:not(.form_box) h5:first-child{
+        margin-right: 0;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    :host > div:not(.form_box) h5:nth-child(3){
+        padding: 0 1rem 0 1rem;
+    }
+
+    .button-copy{
+        display: flex;
+        padding: 1rem;
+        margin: 0;
+        width: 100%;
+    }
+
+    .button-copy button{
+        width: 100%;
+        background-color: red;
     }
 }
