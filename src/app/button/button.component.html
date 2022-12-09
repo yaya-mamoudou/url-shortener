@@ -1,3 +1,4 @@
-<button (click)="onPress()" [style.border-radius]="type === 'primary' ? '50px' : '10px'" [ngClass]="myClass">
-    {{label}}
+<button [style.border-radius]="type === 'primary' ? '50px' : '10px'" [ngClass]="myClass">
+    {{ !loading ? label : 'Loading'}}
+    <div [class.d-none]="!loading" class="loader"></div>
 </button>

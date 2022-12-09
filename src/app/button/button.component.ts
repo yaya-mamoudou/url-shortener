@@ -9,5 +9,5 @@ export class ButtonComponent {
 	@Input() label!: string;
 	@Input() type?: 'primary' | 'secondary' = 'primary';
 	@Input() myClass?: any;
-	@Input() onPress: () => void = () => {};
+	@Input() loading?: boolean;
 }
