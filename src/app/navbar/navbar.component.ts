@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 	styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-	navbarState: boolean = true;
+	navbarState: boolean = false;
 	toggleNavbar = () => {
 		this.navbarState = !this.navbarState;
 	};

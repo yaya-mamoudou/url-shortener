@@ -42,7 +42,7 @@ export class ShortenFormComponent implements OnInit {
 		}
 	}
 
-	async submit() {
+	submit() {
 		if (!this.validate()) return;
 		this.loading = true;
 		this.http

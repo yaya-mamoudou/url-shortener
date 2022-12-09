@@ -63,6 +63,9 @@ p{
         height: 84%;
         width: 10px;
     }
+    h2{
+        font-size: 1.6em;
+    }
 
     p{
         width: 80%;
