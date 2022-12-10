@@ -48,7 +48,10 @@ export class ShortenFormComponent implements OnInit {
 		this.http
 			?.get(`${this.API_URL}url=${this.url}`)
 			.subscribe(
-				(res: any) => this.store(res.result),
+				(res: any) => {
+					this.store(res.result);
+					this.url = '';
+				},
 				({ error }) => this.addError(true, error?.error?.split(',')[0])
 			)
 			.add(() => (this.loading = false));
